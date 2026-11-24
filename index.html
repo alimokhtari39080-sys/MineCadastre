@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11100f"><meta name="description" content="سامانه نمایشی مدیریت و بررسی محدوده‌های معدنی ایران">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="./styles.css"><title>MineCadastre | کاداستر معدن</title>
+</head>
+<body>
+<header><div class="brand"><div class="mark">M</div><div><b>MineCadastre</b><small>سامانه هوشمند بررسی محدوده‌های معدنی</small></div></div><div class="head-actions"><span class="status">نسخه آزمایشی</span><button id="installBtn" hidden>نصب اپلیکیشن</button></div></header>
+<main>
+<aside class="sidebar">
+<div class="section-title">جست‌وجوی محدوده</div>
+<input id="search" placeholder="نام محدوده، مالک یا ماده معدنی...">
+<div class="filters"><select id="statusFilter"><option value="">همه وضعیت‌ها</option><option>آزاد (نمونه)</option><option>دارای مجوز (نمونه)</option></select><select id="typeFilter"><option value="">همه مواد معدنی</option><option>سنگ تزئینی</option><option>آهن</option><option>مس</option><option>سیلیس</option></select></div>
+<div class="section-title row-title"><span>محدوده‌های نمونه</span><span id="count"></span></div><div id="list" class="list"></div>
+<div class="notice"><b>توجه مهم</b><p>اطلاعات این نسخه صرفاً آزمایشی و نمایشی است. وضعیت آزاد/ثبت‌شده، نام اشخاص و لایه‌ها داده رسمی نیستند و برای تصمیم حقوقی یا ثبت محدوده قابل استناد نیستند.</p></div>
+</aside>
+<section class="workspace"><div class="toolbar"><button id="locate">مکان‌یابی من</button><button id="satellite">نمای ماهواره‌ای</button><button id="export">خروجی GeoJSON</button><span id="coords">برای دیدن مختصات روی نقشه کلیک کنید</span></div><div id="map"></div><div class="map-legend"><span><i class="free"></i> آزاد (نمونه)</span><span><i class="licensed"></i> دارای مجوز (نمونه)</span></div></section>
+<aside class="details" id="details"><div class="section-title">اطلاعات محدوده</div><div class="empty">برای مشاهده جزئیات، یکی از محدوده‌های نمونه را انتخاب کنید.</div></aside>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="./app.js"></script>
+</body></html>
